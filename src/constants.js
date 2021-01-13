@@ -1,11 +1,35 @@
-export const IS_PRODUCTION = process.env.NODE_ENV === `production`;
-
-const SERVER_URI = `localhost`;
+export const SERVER_URI = `https://2891637c-8ab7-4a84-906b-a98465726f85.mock.pstmn.io`;
 
 export const ENDPOINTS = {
-  GRAPHQL_URI: IS_PRODUCTION ? `http://${SERVER_URI}/graphql` : `http://${SERVER_URI}:9001/graphql`,
-  SERVER_URI: IS_PRODUCTION ? `http://${SERVER_URI}` : `http://${SERVER_URI}:9001`,
-};
+  prices: `/prices`
+}
+
+export const RECURRENCY_PERIODS = {
+  TRIENNIALLY: {
+    LABEL: `3 anos`,
+    MONTHS: 36,
+  },
+  BIENNIALLY: {
+    LABEL: `2 anos`,
+    MONTHS: 24,
+  },
+  ANNUALLY: {
+    LABEL: `1 ano`,
+    MONTHS: 12,
+  },
+  SEMMIANNUALLU: {
+    LABEL: `6 meses`,
+    MONTHS: 6,
+  },
+  QUARTERLY: {
+    LABEL: `3 meses`,
+    MONTHS: 3,
+  },
+  MONTHLY: {
+    LABEL: `1 mês`,
+    MONTHS: 1,
+  },
+}
 
 export const HTTP_STATUS = {
   OK: 200,
