@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 import colors from '../../styles/colors'
 
-import LeftImage from '../../assets/desk.png'
-import RightImage from '../../assets/guy.png'
-import ArrowDown from '../../assets/arrow-down.png'
+import LeftImage from '../../assets/img/desk.png'
+import RightImage from '../../assets/img/guy.png'
+import ArrowDown from '../../assets/img/arrow-down.png'
 import InformationItem from './InformationItem'
 
 function Informational() {

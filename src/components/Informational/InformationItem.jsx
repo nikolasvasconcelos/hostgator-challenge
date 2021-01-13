@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import CheckImage from '../../assets/icon-check.png'
+import CheckImage from '../../assets/img/icon-check.png'
 import styled from 'styled-components'
 import colors from '../../styles/colors'
 

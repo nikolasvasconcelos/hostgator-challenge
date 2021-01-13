@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Logo from '../../assets/hostgator-logo.png'
+import Logo from '../../assets/img/hostgator-logo.png'
 
 function Header() {
   return (
