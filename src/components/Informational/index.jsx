@@ -11,7 +11,7 @@ import InformationItem from './InformationItem'
 
 function Informational() {
   return (
-    <InfosContainer className="d-flex flex-column flex-base animated fadeIn">
+    <InfosContainer className="d-flex flex-column flex-base animated fadeIn informations-container">
       <div className="d-flex flex-row flex-base">
         <InformationalImg className="d-flex information-img" src={LeftImage} alt="" />
         <ContentWrapper className="d-flex flex-column flex-base">
