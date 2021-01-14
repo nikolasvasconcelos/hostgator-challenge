@@ -1,22 +1,23 @@
 # Hostgator Webpage
  Technical Challenge for Hostgator
 
-## About the project
+#### Bootstraping
+- [Create React App](https://github.com/facebook/create-react-app)
 
-### The project has the following file structure:
+#### Routing
+- [react-router-dom](https://reactrouter.com/)
 
-* App: Contains the main files of the project
-* Assets: Folder containg the needed images
-* Components: Where the app's components are developed and properly separated with it's own child components
-* Containers: Where the connection bewteen the `Components (view)` and the `Models` happens, passing only the necessary props
-* Redux: Folder containing the Redux state container implementation and the API requets
-* Themes: Folder for stylesheets and icon libraries.
 
-## The project's development approach:
-
-The `App` index dispatches a request for the lawsuits. Inside the `Redux` folder, the `Sagas` file listens to the dispatched event, makes de API request and dispatches the response to the `Reducer`, which sends the necessary payload back to the app.
-
-When a single lawsuit is selected, the `App` dispatches another event to search for the respective lawsuit data inside the main payload. If it was not loaded before (in case the user opens the lawsuit detail page straightforward), the previous step is done to load the data properly.
+## Install
+  1. Make sure you have [**node**](https://nodejs.org/), [**yarn**](https://yarnpkg.com/) installed.
+  2. install dependencies
+  ```
+  $ yarn install
+  ```
+  3. runnging development server
+  ```
+  $ yarn start
+  ```
 
 ## Available Scripts
 
@@ -24,20 +25,28 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app's metro bundler.<br>
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `react-native run-ios`
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-This command launches the iOS emulator and runs the app in it.
+### `yarn build`
 
-### `emulator @<YOUR_DEVICE_NAME> -dns-server <your.dnvs.server.ip>`
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-This command launches the Android emulator without opening the Android Studio. It only works if you already have an emulator installed. To verify, run: `avdmanager list avd`
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### `react-native run-android`
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-This command launches the Android version in the emulator.
+### `yarn eject`
 
-### Generate an APK
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Inside the `android/` folder, run `./gradlew assembleRelease`. An APK will be generated in `android/app/build/outputs/apk/release/`
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
