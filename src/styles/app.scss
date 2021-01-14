@@ -1,0 +1,66 @@
+@import "./montserrat";
+
+$darkBlue: #1D5297;
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+code {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+input {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-base {
+  flex: 1;
+}
+
+.display-mobile {
+  display: none;
+}
+
+.Carousel-button-18 {
+  background-color: $darkBlue !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 1024px) {
+  .information-img {
+    display: none;
+  }
+
+  .display-desktop {
+    display: none;
+  }
+
+  .display-mobile {
+    display: flex;
+  }
+}
