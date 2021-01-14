@@ -4,26 +4,16 @@ export const ENDPOINTS = {
   prices: `/prices`
 }
 
+export const PROMO_CODE = `PROMOHG40`;
+
 export const RECURRENCY_PERIODS = {
   TRIENNIALLY: {
     LABEL: `3 anos`,
     MONTHS: 36,
   },
-  BIENNIALLY: {
-    LABEL: `2 anos`,
-    MONTHS: 24,
-  },
   ANNUALLY: {
     LABEL: `1 ano`,
     MONTHS: 12,
-  },
-  SEMMIANNUALLU: {
-    LABEL: `6 meses`,
-    MONTHS: 6,
-  },
-  QUARTERLY: {
-    LABEL: `3 meses`,
-    MONTHS: 3,
   },
   MONTHLY: {
     LABEL: `1 mês`,

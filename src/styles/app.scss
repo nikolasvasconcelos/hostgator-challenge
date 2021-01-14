@@ -1,5 +1,7 @@
 @import "./montserrat";
 
+$darkBlue: #1D5297;
+
 body {
   font-family: 'Montserrat', sans-serif !important;
 }
@@ -38,4 +40,27 @@ input {
 
 .flex-base {
   flex: 1;
+}
+
+.display-mobile {
+  display: none;
+}
+
+.Carousel-button-18 {
+  background-color: $darkBlue !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 1024px) {
+  .information-img {
+    display: none;
+  }
+
+  .display-desktop {
+    display: none;
+  }
+
+  .display-mobile {
+    display: flex;
+  }
 }

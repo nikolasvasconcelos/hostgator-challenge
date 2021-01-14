@@ -7,10 +7,10 @@ import colors from '../../styles/colors'
 
 function InformationItem({label}) {
   return (
-    <div>
+    <Container>
       <CheckIcon src={CheckImage} alt="" />
       <InformationText>{label}</InformationText>
-    </div>
+    </Container>
   )
 }
 
@@ -19,6 +19,10 @@ InformationItem.propTypes = {
 }
 
 export default InformationItem
+
+const Container = styled.div`
+  margin-top: 15px;
+`;
 
 const CheckIcon = styled.img`
   margin-right: 5px;
