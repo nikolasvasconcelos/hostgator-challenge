@@ -6,20 +6,23 @@ export const ENDPOINTS = {
 
 export const PROMO_CODE = `PROMOHG40`;
 
-export const RECURRENCY_PERIODS = {
-  TRIENNIALLY: {
+export const RECURRENCY_PERIODS = [
+  {
+    NAME: `triennially`,
     LABEL: `3 anos`,
     MONTHS: 36,
   },
-  ANNUALLY: {
+  {
+    NAME: `annually`,
     LABEL: `1 ano`,
     MONTHS: 12,
   },
-  MONTHLY: {
+  {
+    NAME: `monthly`,
     LABEL: `1 mês`,
     MONTHS: 1,
   },
-}
+]
 
 export const HTTP_STATUS = {
   OK: 200,

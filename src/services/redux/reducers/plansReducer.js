@@ -4,7 +4,7 @@ import { RESET_PLANS, SET_PLANS } from '../actions';
 
 const initialState = {
   plansList: [],
-  recurrency: `${RECURRENCY_PERIODS.TRIENNIALLY.MONTHS}`
+  recurrency: `${RECURRENCY_PERIODS[0].MONTHS}`
 };
 
 export const Plan = handleActions(

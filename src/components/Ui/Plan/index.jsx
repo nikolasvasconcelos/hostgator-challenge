@@ -6,8 +6,11 @@ import { BlueDescription } from '../Styled';
 
 import colors from '../../../styles/colors';
 import InfoIcon from '../../../assets/img/info.png';
+import { PROMO_CODE, RECURRENCY_PERIODS } from '../../../constants';
+import { Link } from 'react-router-dom';
 
 function Plan({
+  id,
   bestOption,
   planImg,
   planName,
@@ -17,6 +20,8 @@ function Plan({
   planPromotionAfter,
   options = [],
 }) {
+  console.log(id)
+  console.log(RECURRENCY_PERIODS.find(r => +r.MONTHS === +planMonths).NAME)
   return (
     <PlanContainer className="d-flex flex-column align-center">
       <SmallPlanSection className="d-flex flex-base flex-column align-center">
@@ -36,7 +41,7 @@ function Plan({
           </PlanMonthPriceNumber>
           /mês *
         </PlanMonthPrice>
-        <HirePlan bestOption={bestOption}>
+        <HirePlan to={`/home?a="add"&pid="${id}"&billingcycle="${RECURRENCY_PERIODS.find(r => +r.MONTHS === +planMonths).NAME}"&promocode="${PROMO_CODE}"`} bestOption={bestOption}>
           <strong>Contrate Agora</strong>
         </HirePlan>
         <div className="d-flex flex-row align-center">
@@ -60,6 +65,7 @@ function Plan({
 }
 
 Plan.propTypes = {
+  id: PropTypes.number.isRequired,
   planImg: PropTypes.string.isRequired,
   planName: PropTypes.string.isRequired,
   planPrice: PropTypes.number.isRequired,
@@ -128,14 +134,16 @@ const DiscountSummary = styled.div`
   justify-content: space-evenly;
 `;
 
-const HirePlan = styled.button`
+const HirePlan = styled(Link)`
   font-size: 22px;
   margin: 15px 0px;
   color: ${colors.white};
   padding: 10px 17.5px;
   border-radius: 100px;
+  text-align: center;
   border: none;
   width: 80%;
+  text-decoration: none;
   background-color: ${({ bestOption }) => (bestOption ? colors.orange : colors.blue)};
 `;
 

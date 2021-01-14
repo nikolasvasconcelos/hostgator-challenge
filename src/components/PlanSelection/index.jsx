@@ -29,6 +29,7 @@ const PlanToRender = ({ plan, currentCycle }) => {
   return (
     <Plan
       key={plan.id}
+      id={plan.id}
       options={[
         <span>Sites Ilimitados</span>,
         <span>
@@ -72,7 +73,7 @@ function PlanSelection() {
         boxShadow={2}
         className="d-flex flex-row align-center flex-base  animated fadeIn"
       >
-        {Object.values(RECURRENCY_PERIODS).map(p => (
+        {RECURRENCY_PERIODS.map(p => (
           <RadioWrapper
             onClick={() => setRecurrency(`${p.MONTHS}`)}
             className="d-flex flex-row align-center flex-base"
